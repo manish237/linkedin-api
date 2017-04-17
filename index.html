@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Linked In Profile Pull</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="ln-login-images">
+      <a class="ln-login-link" href="#"><img src="Sign-In-Large---Default.png" class="ln-image"></a>
+    </div>
+    <div class="ln-auth-success">
+      <span class="success-msg">Auth Success</span>
+      <a class="ln-data-link" href="#">Pull Data for User</a>
+    </div>
+    <div class="user-data">
+      <span class="user-data">Auth Success</span>
+    </div>
+    <div class="ln-logout">
+      <a class="ln-logout-link" href="#">LogOut</a>
+    </div>
+    <div class="logout-success">
+      <span class="success-msg">Logged Out Success</span>
+    </div>
+  </div>
+</body>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="app.js"></script>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+    api_key: 865d4q7wjtg8xe
+    authorize: true
+</script>
+
+</html>

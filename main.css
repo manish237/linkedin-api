@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ln-images{
+  padding-top: 20px;
+}
+
+.ln-image {
+  width: 250px;
+}
+
