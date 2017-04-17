@@ -3,41 +3,6 @@
 * */
 
 /***********************************************************
- Object to hold search params for API call
- ************************************************************/
-var authParams = {
-    url:'https://www.linkedin.com/oauth/v2/authorization',
-    response_type: 'code',
-    client_id: '865d4q7wjtg8xe',
-    redirect_uri:'http://localhost:63342',
-    state:'Fo8Nd0Qgp2'
-}
-
-
-/***********************************************************
- UI Renderer using the data returned.
- ************************************************************/
-function displayYTSearchData(data) {
-    console.log(data)
-}
-
-/***********************************************************
- Processor function to load data from API
- ************************************************************/
-
-function getAuthToken(searchParams, callback) {
-
-    var query = {
-        response_type: authParams.response_type,
-        client_id: authParams.client_id,
-        redirect_uri:authParams.redirect_uri,
-        state:authParams.state
-    }
-    //console.log(query)
-    $.getJSON(authParams.url, query, callback)
-}
-
-/***********************************************************
 Event Listeners
  ************************************************************/
 
@@ -47,11 +12,17 @@ function renderSucceesLogOut() {
 }
 function renderProfileData(profiles) {
     console.log(profiles);
+    var str = profiles.firstName + " -- " + profiles.lastName;
+    console.log(str)
+    $('.user-data-content').empty()
+    $('.user-data-content').append(str);
     $('.ln-login-images').hide();
     $('.ln-auth-success').hide();
     $('.user-data').show();
     $('.ln-logout').show();
     $('.logout-success').hide();
+
+
     //use information captured above
 }
 
